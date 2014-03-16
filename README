@@ -1,0 +1,14 @@
+Diff Tracer POC
+
+Usage:
+	$ ./diff_tracer -h
+	usage: diff_tracer -cmd cmd args > traceX
+		   diff_tracer -diff trace1 trace2 > diff.idc
+
+	  -cmd=false: Command to execute
+	  -diff=false: Diff traces
+
+Example:
+	$ ./diff_tracer -cmd /bin/ls > ls_trace1
+	$ ./diff_tracer -cmd /bin/ls -ltr > ls_trace2
+	$ ./diff_tracer -diff ls_trace1 ls_trace2 > diff.idc
